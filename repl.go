@@ -112,3 +112,6 @@ func (r *Regolith) Input() (string, error) {
 
 	return strings.Join(cmds, "\n"), nil
 }
+func (r *Regolith) Close() {
+	r.readline.Close()
+}
